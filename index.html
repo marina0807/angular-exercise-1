@@ -1,0 +1,35 @@
+<html lang="en" ng-app="movieApp">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="movieApp.js"></script>
+        <script src="actorCtrl.js"></script>
+    </head>
+    <body>
+       
+        
+        
+        <div ng-controller="actorCtrl">
+             Search:  <input type="text" ng-model="query.lastName" id="search" >
+            
+            <button type="button" class="btn btn-default" ng-click="sortBy('firstName')">Order BY First Name</button>
+           
+            <div class="container">
+                
+                <div class="col-xs-12 col-sm-4 col-md-4 " ng-repeat="actor in actors | filter : query | orderBy: orderProp">
+                        <a ng-href={{actor.imdoUrl}} target="_blank"><img ng-src={{actor.image}}> </a> 
+                          <p>{{actor.firstName}} {{actor.lastName}} </p>                    
+                                
+                        
+                          
+                
+                
+             </div>
+            
+        </div>
+    </div>      
+    </body>
+</html>
