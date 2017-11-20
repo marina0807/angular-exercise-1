@@ -20,7 +20,7 @@ $scope.actors = [];
       $scope.actors.push(new Actor(response.data[i].firstName, response.data[i].lastName, 
         response.data[i].image, response.data[i].imdoUrl))  
     }
-    //alert("success" + JSON.stringify(response.status));
+    
   }, function myError(response) {
     alert("error" + JSON.stringify(response.status));
   })
