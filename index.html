@@ -9,6 +9,7 @@
         <script src="actorCtrl.js"></script>
         <script src="moviesCtrl.js"></script>
         <script src="movieDirective.js"></script>
+        <script src="convert.js"></script>
     </head>
     <body>
        
@@ -32,14 +33,11 @@
              </div>
          <div class="movies"   ng-controller="moviesCtrl">
              <h1>10 Most Popular Movies </h1>
-            <!-- <div class="movie_list" ng-repeat="movie in movies">
-                    <h1>{{movie.name}} </h1>
-                    <h3>{{movie.director}} </h3>
-                    <h3>{{movie.leng}} </h3>
-                    <h3>{{movie.actors}} </h3>
-                    </div>-->
+            
             <my-movie ng-repeat="movie in movies"></my-movie>
         </div>
-    </div>      
+    </div> 
+   
+    
     </body>
 </html>
