@@ -1,13 +1,6 @@
-app.controller("moviesCtrl", function($scope, $http, convert) {
+app.controller("moviesCtrl", function($scope, $http, convert, Movie) {
   
-    function Movie(name, director, leng, actors, link) {
-        this.name = name;
-        this.director = director;
-        this.leng = leng;
-        this.lengStr =  convert.minhour(this.leng);
-        this.actors = actors;
-        this.link = link;
-    }  
+    
    
     $scope.movies = [];
     
